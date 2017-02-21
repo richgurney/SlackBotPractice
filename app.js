@@ -17,6 +17,9 @@ app.use(function (err, req, res, next) {
   res.status(400).send(err.message);
 });
 
+//add a route that listens for a POST to hello
+app.post('/hello', hellobot);
+
 app.listen(port, function () {
   console.log('Slack bot listening on port ' + port);
 });
